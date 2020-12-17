@@ -4,8 +4,13 @@ import { Card, CardText, CardBody, Col } from 'reactstrap';
 const Personajes = (props) => {
 const [readMore, setReadMore]= useState(false);
 const {gender, height, name, mass, birthYear, created, 
-        eyeColor, hairColor, skinColor} = props.people;
-const {titulofilm} =props.films;
+        eyeColor, hairColor, skinColor, filmConnection} = props.people;
+let peliculas = [];
+const {titulofilm} = filmConnection.films;
+if(titulofilm != undefined){
+    peliculas = titulofilm;
+}
+console.log(filmConnection);
 const extraContent = <CardText> 
                     <small class="text-muted">Color de Ojos</small>                 
                     <h6 >{eyeColor}</h6>
@@ -13,6 +18,10 @@ const extraContent = <CardText>
                     <h6 >{hairColor}</h6>
                     <small class="text-muted">Color de Piel</small>                 
                     <h6 >{skinColor}</h6>
+                    {filmConnection.films.map(function(item){
+                        return (<div><small class="text-muted">Pelicula</small>                 
+                        <h6 >{item.title}</h6></div>)
+                    })}
                 </CardText>
 const linkName=readMore?'Read Less':'Read More'
 

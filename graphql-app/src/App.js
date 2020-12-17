@@ -12,14 +12,21 @@ class App extends Component{
     this.state = {
       consulta: '',
       resultados: [],
+      isSearch: false,
       pagina: 0
     };
   }
 
   datosBusqueda = (consulta) => {
+    var isSearch= false;
+    if(consulta.length > 0)
+    {
+      isSearch = true;
+    }
     this.setState({
       consulta: consulta,
-      pagina: 0
+      pagina: 0,
+      isSearch: isSearch
     })    
   }
   
@@ -34,7 +41,8 @@ class App extends Component{
               />
             </div>
             <div className="justify-content-center" >
-              <Results nombre = {this.state.consulta}/>
+              {this.state.isSearch ? <Results nombre = {this.state.consulta}/>: null }
+              
             </div>
         </div>
             
