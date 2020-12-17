@@ -17,32 +17,14 @@ class App extends Component{
     };
   }
 
-  datosBusqueda = (consulta) => {
-    var isSearch= false;
-    if(consulta.length > 0)
-    {
-      isSearch = true;
-    }
-    this.setState({
-      consulta: consulta,
-      pagina: 0,
-      isSearch: isSearch
-    })    
-  }
-  
+
   render() {
     return (
       <ApolloProvider client={client}>
           <div className="app container"  >
             <div className="jumbotron" style={{paddingTop:10, color:"black"}}>
               <p style={{color: "black"}} className="lead text-center"><h2>Star Wars</h2></p>
-              <Buscador
-                datosBusqueda={this.datosBusqueda}
-              />
-            </div>
-            <div className="justify-content-center" >
-              {this.state.isSearch ? <Results nombre = {this.state.consulta}/>: null }
-              
+              <Results />
             </div>
         </div>
             

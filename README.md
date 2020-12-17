@@ -39,22 +39,18 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-# Project Graphql Challenge
+# Graphql Challenge Project
 
-the project shows a search engine that will be used to search for the star wars characters, which will show personal information of each character.
+The project seeks to inform and help in the use of graphql with react, in a practical and simple way.
 
 
 ## Application
 
-To search for a specific character you must enter the character's name.
+The application shows the results obtained from the graphql server, where the information of all the star wars characters is displayed as an example.
 
-![solarized dualmode](https://github.com/lushiannatejada/Ravn-Challenge-V2-lushianna/blob/main/Pics/Search_term.PNG)
+![solarized dualmode](https://github.com/lushiannatejada/Ravn-Challenge-V2-lushianna/blob/main/Pics/Graphql-StarWars.PNG)
 
-If you just want to show all characters, just click on the 'Enviar' Button to show all.
-
-![solarized dualmode](https://github.com/lushiannatejada/Ravn-Challenge-V2-lushianna/blob/main/Pics/Search_all.PNG)
-
-## Trechnologies
+## Technologies
 
 ### `Graphql`
 

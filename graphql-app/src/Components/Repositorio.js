@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import  {useQuery} from '@apollo/react-hooks';
 import { Spinner, Button } from 'reactstrap';
 import Personajes from './Resultados';
@@ -7,9 +7,10 @@ import Query from './Graphql/Query';
 const updateQuery = (previousResult, { fetchMoreResult }) => {
     return fetchMoreResult.allPeople.people.length ? fetchMoreResult : previousResult;
   };
-
   const PostList = ({ data, error, loading, fetchMore }) => {
     const { allPeople } = data;
+    const [pag, setPag] = useState(5);
+    console.log('pag' + pag);
     return (
       <div>
         <h2>Resultados</h2>
@@ -31,14 +32,15 @@ const updateQuery = (previousResult, { fetchMoreResult }) => {
               {allPeople.pageInfo.hasPreviousPage ? (
                 <Button
                   onClick={() => {
+                    setPag(pag-5);
                     fetchMore({
                       variables: {
-                        first: null,
+                        first: pag,
                         after: null,
                         last: 5,
-                        before: allPeople.pageInfo.startCursor || null
+                        before: null
                       },
-                      updateQuery
+                      updateQuery                      
                     });
                   }}
                 >
@@ -48,11 +50,12 @@ const updateQuery = (previousResult, { fetchMoreResult }) => {
               {allPeople.pageInfo.hasNextPage ? (
                 <Button
                   onClick={() => {
+                    setPag(pag+5);
                     fetchMore({
                       variables: {
-                        first: 5,
-                        after: allPeople.pageInfo.endCursor || null,
-                        last: null,
+                        first: pag,
+                        after: null,
+                        last: 5,
                         before: null
                       },
                       updateQuery
