@@ -39,32 +39,49 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Project Graphql Challenge
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+the project shows a search engine that will be used to search for the star wars characters, which will show personal information of each character.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+##Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To search for a specific character you must enter the character's name.
 
-### Analyzing the Bundle Size
+![solarized dualmode](https://github.com/lushiannatejada/Ravn-Challenge-V2-lushianna/blob/main/Pics/Search_term.PNG)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+If you just want to show all characters, just click on the 'Enviar' Button to show all.
 
-### Making a Progressive Web App
+![solarized dualmode](https://github.com/lushiannatejada/Ravn-Challenge-V2-lushianna/blob/main/Pics/Search_all.PNG)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+##Trechnologies
 
-### Advanced Configuration
+##Graphql
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.
 
-### Deployment
+More information: (https://graphql.org/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+##Apollo Client
 
-### `npm run build` fails to minify
+Apollo Client is a comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL. Use it to fetch, cache, and modify application data, all while automatically updating your UI.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+More Information: (https://www.apollographql.com/docs/react/)
+
+##React 
+
+React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
+
+Declarative views make your code more predictable and easier to debug.
+
+More Information: (https://reactjs.org/)
+
+##Reactstrap
+
+This library contains React Bootstrap 4 components that favor composition and control. The library does not depend on jQuery or Bootstrap javascript. However, https://popper.js.org/ via https://github.com/souporserious/react-popper is relied upon for advanced positioning of content like Tooltips, Popovers, and auto-flipping Dropdowns.
+
+More Information: (https://reactstrap.github.io/)
+
+
+
+
